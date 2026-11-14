@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \".storybook/**/*.ts\" \"*.{json,mjs,ts}\" README.md",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \".storybook/**/*.ts\" \"*.{json,mjs,ts}\" README.md",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "next": "16.4.6",
@@ -14,13 +19,17 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "4.3.3",
+    "@storybook/addon-docs": "^10.6.7",
+    "@storybook/nextjs-vite": "^10.6.7",
+    "@tailwindcss/postcss": "^4.3.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
-    "tailwindcss": "4.3.3",
+    "prettier": "^3.10.1",
+    "storybook": "^10.6.7",
+    "tailwindcss": "^4.3.5",
     "typescript": "^5"
   }
 }

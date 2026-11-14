@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts (usa 'inline' porque referencia variáveis externas do Next.js) */
+  --font-sans: var(--font-inter);
+  --font-jakarta: var(--font-plus-jakarta), sans-serif;
+
+  /* Colors (gera automaticamente variáveis no :root + classes utilitárias) */
+  --color-text-primary: #171b2c;
+  --color-primary-blue: #3157f6;
+  --color-background-white: #ffffff;
+  --color-primary-blue-light: #e2e8ff;
+  --color-text-secondary: #656770;
+  --color-line-1: #dbdfeb;
+  --color-text-tertiary: #6d7384;
+  --color-text-white-tertiary: #9e9faa;
+  --color-background-light-yellow: #f9f8f3;
+  --color-secondary-yellow: #ffee7e;
+  --color-text-white-secondary: #e7e7ec;
+  --color-text-white-primary: #ffffff;
+  --color-background-yellow: #fff1c2;
+  --color-background-darkblue: #171b2c;
+  --color-primary-orange: #ff704d;
+  --color-primary-yellow: #e9d659;
+  --color-background-orange: #ffcb9f;
+}
+
+body {
+  background: var(--color-background-light-yellow);
+  font-family: var(--font-sans);
+}

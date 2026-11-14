@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Component Library
 
-## Getting Started
+Base de uma biblioteca de componentes reutilizáveis com Next.js App Router,
+TypeScript, Tailwind CSS e Storybook.
 
-First, run the development server:
+## Requisitos
+
+- Node.js compatível com Next.js 16
+- npm
+
+## Instalação e execução
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) para visualizar a aplicação.
+Para desenvolver e documentar componentes isoladamente:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run storybook
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O Storybook fica disponível em [http://localhost:6006](http://localhost:6006).
 
-## Learn More
+## Verificações
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npm run typecheck
+npm run format:check
+npm run build
+npm run build-storybook
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+.storybook/                 Configuração e preview global do Storybook
+src/
+  app/                      App Router e estilos globais/Tailwind
+  components/
+    ui/
+      button/               Componente Button e suas histórias
+  lib/                       Utilitários compartilhados
+public/                      Arquivos estáticos
+```
 
-## Deploy on Vercel
+O tema do Tailwind 4 e os tokens iniciais do design system estão em
+`src/app/globals.css`. Esse mesmo arquivo é carregado pelo layout Next.js e pelo
+preview do Storybook.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adicionando componentes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Crie uma pasta em `src/components/ui/nome-do-componente/`.
+2. Implemente o componente em TypeScript usando utilitários Tailwind.
+3. Crie um `NomeDoComponente.stories.tsx` ao lado do componente. Configure
+   `argTypes` para controles e adicione `tags: ["autodocs"]`.
+4. Exporte o componente pelo `index.ts` da pasta, depois por
+   `src/components/ui/index.ts`, para que possa ser importado de `@/components`.
+
+O Storybook encontra automaticamente os arquivos `*.stories.tsx` dentro de
+`src/`.
