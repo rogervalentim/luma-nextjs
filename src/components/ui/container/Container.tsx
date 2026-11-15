@@ -6,7 +6,7 @@ const spacingMap: Record<SpacingSize, string> = {
   none: "",
   sm: "py-4 md:py-6",
   md: "py-10 md:py-16",
-  lg: "py-16 md:py-24",
+  lg: "py-15 md:py-25",
 };
 
 export type ContainerProps<T extends ElementType = "div"> = {
