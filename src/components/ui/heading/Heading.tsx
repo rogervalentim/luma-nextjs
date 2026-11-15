@@ -1,7 +1,7 @@
 import React from "react";
 
 export type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-export type HeadingVariant = "display" | "h1" | "h2" | "h3";
+export type HeadingVariant = "display" | "h1" | "h2" | "h3" | "h4";
 export type HeadingColor = "primary" | "primaryBlue" | "white";
 
 export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
@@ -17,6 +17,7 @@ const variantStyles: Record<HeadingVariant, string> = {
   h1: "text-[32px] leading-[36px] tracking-[-0.8px] sm:text-[40px] lg:text-[48px] lg:leading-14 lg:tracking-[-1.2px] font-extrabold",
   h2: "text-[20px] leading-[32px] tracking-[0px] lg:text-[30px] font-semibold lg:leading-[44px] lg:tracking-[-0.75px]",
   h3: "text-[20px] leading-[28px] lg:leading-[32px] font-bold",
+  h4: "text-[20px] leading-[32px] tracking-[0px] font-bold",
 };
 
 const colorStyles: Record<HeadingColor, string> = {

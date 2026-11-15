@@ -16,7 +16,7 @@ const meta: Meta<typeof Heading> = {
     },
     variant: {
       control: "select",
-      options: ["display", "h1", "h2", "h3"],
+      options: ["display", "h1", "h2", "h3", "h4"],
       description: "Estilo visual da tipografia",
       table: {
         defaultValue: { summary: "display" },
@@ -87,6 +87,15 @@ export const Heading3: Story = {
   },
 };
 
+export const Heading4: Story = {
+  args: {
+    as: "h4",
+    variant: "h4",
+    color: "primary",
+    children: "Small Subsection or Item Heading",
+  },
+};
+
 export const AllVariants: Story = {
   render: () => (
     <div className="flex flex-col gap-8">
@@ -125,6 +134,15 @@ export const AllVariants: Story = {
         </span>
         <Heading as="h3" variant="h3">
           Card or Subsection Heading
+        </Heading>
+      </div>
+
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-2">
+          variant=&quot;h4&quot;
+        </span>
+        <Heading as="h4" variant="h4">
+          Small Subsection or Item Heading
         </Heading>
       </div>
     </div>
