@@ -16,7 +16,7 @@ const meta: Meta<typeof Paragraph> = {
     },
     tone: {
       control: "select",
-      options: ["primary", "secondary", "tertiary", "white"],
+      options: ["primary", "secondary", "tertiary", "white", "primaryBlue"],
       description: "Token de cor aplicado ao texto e borda",
     },
     variant: {
@@ -91,6 +91,14 @@ export const TertiaryTone: Story = {
   args: {
     size: "md",
     tone: "tertiary",
+    maxWidth: "prose",
+  },
+};
+
+export const PrimaryBlueTone: Story = {
+  args: {
+    size: "md",
+    tone: "primaryBlue",
     maxWidth: "prose",
   },
 };
@@ -170,6 +178,18 @@ export const OutlinedBadges: Story = {
           Intermediate
         </Paragraph>
       </div>
+
+      <div className="flex flex-wrap gap-3 p-2">
+        <Paragraph size="sm" tone="primaryBlue" variant="outlined">
+          8 lessons
+        </Paragraph>
+        <Paragraph size="sm" tone="primaryBlue" variant="outlined">
+          2h 40min
+        </Paragraph>
+        <Paragraph size="sm" tone="primaryBlue" variant="outlined">
+          Intermediate
+        </Paragraph>
+      </div>
     </div>
   ),
 };
@@ -222,6 +242,16 @@ export const AllVariants: Story = {
           Medium / Tertiary / Prose Max-Width
         </span>
         <Paragraph size="md" tone="tertiary" maxWidth="prose">
+          Build real-world projects with guided feedback and structured modules
+          designed to take you from fundamentals to production-ready code.
+        </Paragraph>
+      </div>
+
+      <div>
+        <span className="mb-1 block text-xs font-medium text-neutral-400">
+          Medium / Primary Blue / Prose Max-Width
+        </span>
+        <Paragraph size="md" tone="primaryBlue" maxWidth="prose">
           Build real-world projects with guided feedback and structured modules
           designed to take you from fundamentals to production-ready code.
         </Paragraph>
@@ -300,6 +330,23 @@ export const AllVariants: Story = {
             2h 40min
           </Paragraph>
           <Paragraph size="sm" tone="tertiary" variant="outlined">
+            Intermediate
+          </Paragraph>
+        </div>
+      </div>
+
+      <div>
+        <span className="mb-1 block text-xs font-medium text-neutral-400">
+          Small / Primary Blue / Outlined Variant
+        </span>
+        <div className="flex flex-wrap gap-3">
+          <Paragraph size="sm" tone="primaryBlue" variant="outlined">
+            8 lessons
+          </Paragraph>
+          <Paragraph size="sm" tone="primaryBlue" variant="outlined">
+            2h 40min
+          </Paragraph>
+          <Paragraph size="sm" tone="primaryBlue" variant="outlined">
             Intermediate
           </Paragraph>
         </div>
