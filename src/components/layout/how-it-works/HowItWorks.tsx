@@ -93,7 +93,10 @@ export function HowItWorks() {
         />
 
         {steps.map((item, index) => (
-          <div key={index} className="relative z-10 flex flex-col items-start">
+          <div
+            key={index}
+            className="relative z-10 flex flex-col items-start h-full"
+          >
             <div className="relative flex items-center mb-6">
               {index > 0 && (
                 <div
@@ -115,7 +118,7 @@ export function HowItWorks() {
             <Paragraph
               size="default"
               tone="secondary"
-              className="max-w-full lg:max-w-[320px]"
+              className="mt-auto max-w-full lg:max-w-[320px] font-normal"
             >
               {item.description}
             </Paragraph>
