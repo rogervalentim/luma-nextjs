@@ -16,7 +16,7 @@ const meta: Meta<typeof Heading> = {
     },
     variant: {
       control: "select",
-      options: ["display", "h1", "h3"],
+      options: ["display", "h1", "h2", "h3"],
       description: "Estilo visual da tipografia",
       table: {
         defaultValue: { summary: "display" },
@@ -24,7 +24,7 @@ const meta: Meta<typeof Heading> = {
     },
     color: {
       control: "select",
-      options: ["primary", "white"],
+      options: ["primary", "primaryBlue", "white"],
       description: "Variação de cor do texto",
       table: {
         defaultValue: { summary: "primary" },
@@ -69,6 +69,15 @@ export const Heading1: Story = {
   },
 };
 
+export const Heading2: Story = {
+  args: {
+    as: "h2",
+    variant: "h2",
+    color: "primary",
+    children: "Section Secondary Heading",
+  },
+};
+
 export const Heading3: Story = {
   args: {
     as: "h3",
@@ -103,6 +112,15 @@ export const AllVariants: Story = {
 
       <div>
         <span className="text-xs font-mono text-gray-400 block mb-2">
+          variant=&quot;h2&quot;
+        </span>
+        <Heading as="h2" variant="h2">
+          Section Secondary Heading
+        </Heading>
+      </div>
+
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-2">
           variant=&quot;h3&quot;
         </span>
         <Heading as="h3" variant="h3">
@@ -122,6 +140,15 @@ export const AllColors: Story = {
         </span>
         <Heading as="h2" variant="h1" color="primary">
           Primary Heading Color
+        </Heading>
+      </div>
+
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-1">
+          color=&quot;primaryBlue&quot;
+        </span>
+        <Heading as="h2" variant="h1" color="primaryBlue">
+          Primary Blue Heading Color
         </Heading>
       </div>
 

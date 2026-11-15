@@ -16,7 +16,7 @@ export interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElemen
 const sizeClasses: Record<ParagraphSize, string> = {
   xs: "text-xs leading-4 tracking-[1.44px] font-semibold",
   sm: "text-sm font-normal leading-6",
-  default: "text-base font-normal leading-7",
+  default: "text-base  leading-7",
   md: "text-sm leading-6 lg:text-base lg:leading-7",
   lg: "text-[18px] leading-7",
 };
@@ -69,7 +69,6 @@ export const Paragraph: React.FC<ParagraphProps> = ({
   ...props
 }) => {
   const combinedClasses = [
-    "font-normal",
     sizeClasses[size],
     toneClasses[tone],
     variantClasses[variant][tone],
