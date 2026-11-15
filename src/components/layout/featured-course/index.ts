@@ -1,1 +1,1 @@
-import { FeaturedCourse } from "./FeaturedCourse";
+export { FeaturedCourse } from "./FeaturedCourse";
