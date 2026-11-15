@@ -16,7 +16,8 @@ const meta: Meta<typeof Heading> = {
     },
     variant: {
       control: "select",
-      options: ["display", "h1", "h2", "h3", "h4"],
+      // 1. Adicionado "displaySm" nas opções do select
+      options: ["display", "displaySm", "h1", "h2", "h3", "h4"],
       description: "Estilo visual da tipografia",
       table: {
         defaultValue: { summary: "display" },
@@ -57,6 +58,16 @@ export const Display: Story = {
         <br /> forward.
       </>
     ),
+  },
+};
+
+// 2. Nova story individual para o DisplaySm
+export const DisplaySm: Story = {
+  args: {
+    as: "h1",
+    variant: "displaySm",
+    color: "primary",
+    children: "Secondary Hero Display Heading",
   },
 };
 
@@ -107,6 +118,16 @@ export const AllVariants: Story = {
           Build skills that
           <br /> actually move you
           <br /> forward.
+        </Heading>
+      </div>
+
+      {/* 3. Adicionado na listagem de todas as variantes */}
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-2">
+          variant=&quot;displaySm&quot;
+        </span>
+        <Heading as="h1" variant="displaySm">
+          Secondary Hero Display Heading
         </Heading>
       </div>
 
