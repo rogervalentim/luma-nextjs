@@ -30,7 +30,7 @@ export function Hero() {
           <br /> actually move you
           <br /> forward.
         </Heading>
-        <Paragraph className="max-w-full lg:max-w-120 mb-8">
+        <Paragraph className="max-w-full lg:max-w-120 mb-8" tone="secondary">
           Practical courses taught by people who do the work every day. Learn
           design, technology, business and more — one focused lesson at a time.
         </Paragraph>

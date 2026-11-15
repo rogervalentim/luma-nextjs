@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-export type ButtonVariant = "primary" | "outline";
+export type ButtonVariant = "primary" | "outline" | "secondary" | "ghost";
 
 export type ButtonSize = "sm" | "md" | "lg";
 
@@ -20,6 +20,10 @@ const variantClasses: Record<ButtonVariant, string> = {
     "border border-transparent text-background-white bg-primary-blue hover:bg-primary-blue/90",
   outline:
     "border border-line-1 text-text-primary bg-background-white hover:bg-background-white/90 transition-colors hover:border-slate-300 hover:bg-slate-50/80 hover:shadow-xs focus-visible:ring-slate-400 active:bg-slate-100",
+  secondary:
+    "border border-transparent text-text-primary bg-secondary-yellow hover:bg-secondary-yellow/90 transition-colors",
+  ghost:
+    "border border-transparent flex gap-2 items-center bg-transparent text-background-white hover:bg-background-white/10 active:bg-background-white/20 focus-visible:ring-background-white/50",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {

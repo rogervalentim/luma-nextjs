@@ -19,7 +19,7 @@ const meta: Meta<typeof Button> = {
     children: { control: "text" },
     variant: {
       control: "select",
-      options: ["primary", "secondary", "outline", "ghost", "destructive"],
+      options: ["primary", "secondary", "outline", "ghost"],
     },
     size: {
       control: "select",
@@ -38,6 +38,30 @@ export const Primary: Story = {
   args: {
     variant: "primary",
     children: "Primary",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+    children: "Secondary",
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    variant: "outline",
+    children: "Outline",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    children: "Ghost",
+  },
+  parameters: {
+    backgrounds: { default: "dark" },
   },
 };
 
@@ -75,6 +99,17 @@ export const AllVariants: Story = {
       <Button {...args} variant="primary">
         Primary
       </Button>
+      <Button {...args} variant="secondary">
+        Secondary
+      </Button>
+      <Button {...args} variant="outline">
+        Outline
+      </Button>
+      <div className="rounded-lg bg-slate-900 p-2">
+        <Button {...args} variant="ghost">
+          Ghost
+        </Button>
+      </div>
     </div>
   ),
 };

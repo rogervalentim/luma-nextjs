@@ -41,7 +41,10 @@ export function Categories() {
         <Heading className="max-w-full lg:max-w-140 mb-4" variant="h1">
           Learn something worth knowing.
         </Heading>
-        <Paragraph className="max-w-full lg:max-w-140 mb-12 lg:mb-10">
+        <Paragraph
+          className="max-w-full lg:max-w-140 mb-12 lg:mb-10"
+          tone="secondary"
+        >
           Short, practical courses designed around skills you can put to work
           immediately.
         </Paragraph>

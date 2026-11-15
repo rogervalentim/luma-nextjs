@@ -16,10 +16,18 @@ const meta: Meta<typeof Heading> = {
     },
     variant: {
       control: "select",
-      options: ["display", "h1"],
+      options: ["display", "h1", "h3"],
       description: "Estilo visual da tipografia",
       table: {
         defaultValue: { summary: "display" },
+      },
+    },
+    color: {
+      control: "select",
+      options: ["primary", "white"],
+      description: "Variação de cor do texto",
+      table: {
+        defaultValue: { summary: "primary" },
       },
     },
     className: {
@@ -40,6 +48,7 @@ export const Display: Story = {
   args: {
     as: "h1",
     variant: "display",
+    color: "primary",
     className: "mb-6",
     children: (
       <>
@@ -55,7 +64,17 @@ export const Heading1: Story = {
   args: {
     as: "h1",
     variant: "h1",
+    color: "primary",
     children: "Section Main Heading",
+  },
+};
+
+export const Heading3: Story = {
+  args: {
+    as: "h3",
+    variant: "h3",
+    color: "primary",
+    children: "Card or Subsection Heading",
   },
 };
 
@@ -79,6 +98,39 @@ export const AllVariants: Story = {
         </span>
         <Heading as="h1" variant="h1">
           Section Main Heading
+        </Heading>
+      </div>
+
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-2">
+          variant=&quot;h3&quot;
+        </span>
+        <Heading as="h3" variant="h3">
+          Card or Subsection Heading
+        </Heading>
+      </div>
+    </div>
+  ),
+};
+
+export const AllColors: Story = {
+  render: () => (
+    <div className="flex flex-col gap-6">
+      <div>
+        <span className="text-xs font-mono text-gray-400 block mb-1">
+          color=&quot;primary&quot;
+        </span>
+        <Heading as="h2" variant="h1" color="primary">
+          Primary Heading Color
+        </Heading>
+      </div>
+
+      <div className="bg-slate-900 p-6 rounded-lg">
+        <span className="text-xs font-mono text-gray-400 block mb-1">
+          color=&quot;white&quot;
+        </span>
+        <Heading as="h2" variant="h1" color="white">
+          White Heading Color
         </Heading>
       </div>
     </div>

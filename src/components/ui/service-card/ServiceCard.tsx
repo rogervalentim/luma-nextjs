@@ -31,7 +31,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         {title}
       </Heading>
 
-      <Paragraph size="sm" className="mb-5.5">
+      <Paragraph size="sm" className="mb-5.5" tone="tertiary">
         {description}
       </Paragraph>
 
