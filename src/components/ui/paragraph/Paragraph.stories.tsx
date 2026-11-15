@@ -11,7 +11,7 @@ const meta: Meta<typeof Paragraph> = {
   argTypes: {
     size: {
       control: "select",
-      options: ["xs", "sm", "md", "lg"],
+      options: ["xs", "sm", "default", "md", "lg"],
       description: "Escala tipográfica do parágrafo",
     },
     tone: {
@@ -60,6 +60,14 @@ export const HeroDescription: Story = {
     tone: "primary",
     maxWidth: "hero",
     className: "mb-8",
+  },
+};
+
+export const BodyBase: Story = {
+  args: {
+    size: "default",
+    tone: "primary",
+    maxWidth: "prose",
   },
 };
 
@@ -176,6 +184,16 @@ export const AllVariants: Story = {
         <Paragraph size="lg" tone="primary" maxWidth="hero">
           Practical courses taught by people who do the work every day. Learn
           design, technology, business and more — one focused lesson at a time.
+        </Paragraph>
+      </div>
+
+      <div>
+        <span className="mb-1 block text-xs font-medium text-neutral-400">
+          Default (Base) / Primary / Prose Max-Width
+        </span>
+        <Paragraph size="default" tone="primary" maxWidth="prose">
+          Build real-world projects with guided feedback and structured modules
+          designed to take you from fundamentals to production-ready code.
         </Paragraph>
       </div>
 

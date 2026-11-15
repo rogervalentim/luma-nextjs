@@ -1,6 +1,6 @@
 import React from "react";
 
-export type ParagraphSize = "xs" | "sm" | "md" | "lg";
+export type ParagraphSize = "xs" | "sm" | "default" | "md" | "lg";
 export type ParagraphTone = "primary" | "secondary" | "white" | "tertiary";
 export type ParagraphVariant = "default" | "outlined";
 
@@ -16,6 +16,7 @@ export interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElemen
 const sizeClasses: Record<ParagraphSize, string> = {
   xs: "text-xs leading-4 tracking-[1.44px] font-semibold",
   sm: "text-sm font-normal leading-6",
+  default: "text-base font-normal leading-7",
   md: "text-sm leading-6 lg:text-base lg:leading-7",
   lg: "text-[18px] leading-7",
 };
@@ -27,7 +28,6 @@ const toneClasses: Record<ParagraphTone, string> = {
   white: "text-white",
 };
 
-// Adicionado mapeamento de cores de borda para acompanhar o tone
 const variantClasses: Record<
   ParagraphVariant,
   Record<ParagraphTone, string>
