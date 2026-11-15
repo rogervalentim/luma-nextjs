@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-export type ButtonVariant = "primary";
+export type ButtonVariant = "primary" | "outline";
 
 export type ButtonSize = "sm" | "md" | "lg";
 
@@ -18,6 +18,8 @@ export type ButtonProps = {
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "border border-transparent text-background-white bg-primary-blue hover:bg-primary-blue/90",
+  outline:
+    "border border-line-1 text-text-primary bg-background-white hover:bg-background-white/90 transition-colors hover:border-slate-300 hover:bg-slate-50/80 hover:shadow-xs focus-visible:ring-slate-400 active:bg-slate-100",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
