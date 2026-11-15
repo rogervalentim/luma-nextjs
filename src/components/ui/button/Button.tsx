@@ -1,20 +1,38 @@
 import { cn } from "@/lib/utils";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import Link, { type LinkProps } from "next/link";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 
 export type ButtonVariant = "primary" | "outline" | "secondary" | "ghost";
-
 export type ButtonSize = "sm" | "md" | "lg";
 
-export type ButtonProps = {
+type BaseButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
   disabled?: boolean;
-  onClick?: ButtonHTMLAttributes<HTMLButtonElement>["onClick"];
   className?: string;
 };
 
-// 2. Defina os estilos visuais de cada variação
+type ButtonAsButtonProps = BaseButtonProps &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseButtonProps> & {
+    href?: undefined;
+  };
+
+type ButtonAsLinkProps = BaseButtonProps &
+  Omit<
+    AnchorHTMLAttributes<HTMLAnchorElement>,
+    keyof BaseButtonProps | "href"
+  > &
+  Omit<LinkProps, "href"> & {
+    href: string;
+  };
+
+export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
+
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "border border-transparent text-background-white bg-primary-blue hover:bg-primary-blue/90",
@@ -29,7 +47,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "px-5 py-2.5 text-sm",
   md: "px-7 py-3.5 text-sm",
-  lg: "px-6 text-base",
+  lg: "px-6 py-4 text-base", // Adicionei py-4 para manter proporção com sm e md
 };
 
 export function Button({
@@ -37,26 +55,50 @@ export function Button({
   variant = "primary",
   size = "md",
   disabled = false,
-  onClick,
   className,
-  type = "button",
   ...props
-}: ButtonProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "onClick">) {
+}: ButtonProps) {
+  const classes = cn(
+    "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold leading-6 cursor-pointer transition-colors duration-200 ease-out",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+    "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
+    disabled && "pointer-events-none cursor-not-allowed opacity-50",
+    variantClasses[variant],
+    sizeClasses[size],
+    className,
+  );
+
+  if (props.href !== undefined) {
+    const { href, onClick, ...linkProps } = props;
+
+    return (
+      <Link
+        href={href}
+        aria-disabled={disabled}
+        tabIndex={disabled ? -1 : undefined}
+        onClick={(e) => {
+          if (disabled) {
+            e.preventDefault();
+            return;
+          }
+          onClick?.(e);
+        }}
+        className={classes}
+        {...linkProps}
+      >
+        {children}
+      </Link>
+    );
+  }
+
+  const { type = "button", ...buttonProps } = props;
+
   return (
     <button
       type={type}
       disabled={disabled}
-      onClick={onClick}
-      className={cn(
-        "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold leading-6 cursor-pointer transition-colors duration-200 ease-out",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-        "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
-        variantClasses[variant],
-        sizeClasses[size],
-        className,
-      )}
-      {...props}
+      className={classes}
+      {...buttonProps}
     >
       {children}
     </button>

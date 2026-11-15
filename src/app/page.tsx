@@ -1,4 +1,5 @@
 import { Categories } from "@/components/layout/categories/Categories";
+import { CommunityShowcase } from "@/components/layout/community-showcase/CommunityShowcase";
 import { FeaturedCourse } from "@/components/layout/featured-course/FeaturedCourse";
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/layout/hero/Hero";
@@ -15,6 +16,7 @@ export default function Home() {
         <FeaturedCourse />
         <HowItWorks />
         <SocialProof />
+        <CommunityShowcase />
       </main>
     </>
   );

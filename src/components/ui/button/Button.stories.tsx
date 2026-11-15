@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Button, type ButtonProps } from "./Button";
 
-import { Button } from "./Button";
-
-const meta: Meta<typeof Button> = {
+const meta = {
   title: "Components/UI/Button",
   component: Button,
   tags: ["autodocs"],
@@ -17,6 +16,7 @@ const meta: Meta<typeof Button> = {
   },
   argTypes: {
     children: { control: "text" },
+    href: { control: "text" },
     variant: {
       control: "select",
       options: ["primary", "secondary", "outline", "ghost"],
@@ -29,7 +29,7 @@ const meta: Meta<typeof Button> = {
     className: { control: "text" },
     onClick: { action: "clicked" },
   },
-};
+} satisfies Meta<ButtonProps>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -93,20 +93,48 @@ export const Disabled: Story = {
   },
 };
 
+export const AsLink: Story = {
+  args: {
+    href: "/dashboard",
+    children: "Link Button",
+    variant: "primary",
+  },
+};
+
 export const AllVariants: Story = {
-  render: (args) => (
+  render: ({ size, disabled, className }) => (
     <div className="flex flex-wrap items-center gap-4">
-      <Button {...args} variant="primary">
+      <Button
+        size={size}
+        disabled={disabled}
+        className={className}
+        variant="primary"
+      >
         Primary
       </Button>
-      <Button {...args} variant="secondary">
+      <Button
+        size={size}
+        disabled={disabled}
+        className={className}
+        variant="secondary"
+      >
         Secondary
       </Button>
-      <Button {...args} variant="outline">
+      <Button
+        size={size}
+        disabled={disabled}
+        className={className}
+        variant="outline"
+      >
         Outline
       </Button>
       <div className="rounded-lg bg-slate-900 p-2">
-        <Button {...args} variant="ghost">
+        <Button
+          size={size}
+          disabled={disabled}
+          className={className}
+          variant="ghost"
+        >
           Ghost
         </Button>
       </div>
