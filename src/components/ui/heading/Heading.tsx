@@ -1,7 +1,7 @@
 import React from "react";
 
 export type HeadingElement = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-export type HeadingVariant = "display" | "h1";
+export type HeadingVariant = "display" | "h1" | "h3";
 
 export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   /** Define a tag HTML renderizada (SEO e Acessibilidade) */
@@ -15,7 +15,8 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 const variantStyles: Record<HeadingVariant, string> = {
   display:
     "text-[40px] sm:text-[52px] lg:text-[64px] leading-11 sm:leading-14 lg:leading-17.5 tracking-[-1px] lg:tracking-[-1.6px] font-extrabold",
-  h1: "text-[32px] sm:text-[40px] lg:text-[48px] leading-tight tracking-[-0.8px] font-bold",
+  h1: "text-[32px] leading-[36px] tracking-[-0.8px] sm:text-[40px] lg:text-[48px] lg:leading-14 lg:tracking-[-1.2px] font-extrabold",
+  h3: "text-[20px] leading-[28px] lg:leading-[32px] font-bold text-text-primary",
 };
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(

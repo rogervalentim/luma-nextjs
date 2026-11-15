@@ -65,7 +65,7 @@ export function Hero() {
         />
 
         <div className="px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 bg-background-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.10)] absolute top-4 -left-3 sm:-left-5.5 z-20 rounded-xl">
-          <Badge>120+</Badge>
+          <Badge className="h-7 px-1 rounded-lg">120+</Badge>
           <p className="text-xs sm:text-sm font-normal leading-6 text-text-primary whitespace-nowrap">
             expert-led courses
           </p>

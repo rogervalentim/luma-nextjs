@@ -12,7 +12,7 @@ export interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElemen
 }
 
 const sizeClasses: Record<ParagraphSize, string> = {
-  sm: "text-sm leading-6",
+  sm: "text-sm font-normal leading-6",
   md: "text-base leading-6",
   lg: "text-[18px] leading-7",
 };
