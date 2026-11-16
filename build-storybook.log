@@ -1,0 +1,334 @@
+
+> luma-nextjs@0.1.0 build-storybook
+> storybook build --output-dir=C:\Users\Home\AppData\Local\Temp\chromatic--5820-LuS4C0fZWVV1 --stats-json=C:\Users\Home\AppData\Local\Temp\chromatic--5820-LuS4C0fZWVV1
+
+
+[90m┌[39m  Building storybook v10.6.7
+[90m│[39m
+[32m◇[39m  Cleaning outputDir:
+[90m│[39m  [36m../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1[39m
+[90m│[39m
+[32m◇[39m  Loading presets
+[90m│[39m
+[32m◇[39m  Building manager..
+[90m│[39m
+[34m●[39m  Building open services..
+[90m│[39m
+[34m●[39m  Building preview..
+[90m│[39m  [43mVite[49m [36mvite v8.3.8 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 367 modules transformed.
+rendering chunks...
+computing gzip size...
+[90m│[39m  [43mVite[49m ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/iframe.html
+[90m│[39m  18.83 kB │ gzip:   5.33 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/iframe-CNCJE3j3.css
+[90m│[39m  35.58 kB │ gzip:   7.71 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/iframe-C1TWReBq.js
+[90m│[39m  0.04 kB │ gzip:   0.06 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/eyebrow-B_uwww9x.js
+[90m│[39m  0.14 kB │ gzip:   0.13 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/heading-CSzMOZAY.js
+[90m│[39m  0.14 kB │ gzip:   0.13 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/container-BwM57bYx.js
+[90m│[39m  0.15 kB │ gzip:   0.13 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/paragraph-x_6RtFGt.js
+[90m│[39m  0.15 kB │ gzip:   0.14 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/ui-Dq0dS5ia.js
+[90m│[39m  0.18 kB │ gzip:   0.14 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/components-C3k-en9Q.js
+[90m│[39m  0.20 kB │ gzip:   0.18 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/chunk-242VQQM5-CJ9i1iaj.js
+[90m│[39m  0.24 kB │ gzip:   0.20 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/formatter-L2YTDE3Q-CLhZgoiK.js
+[90m│[39m  0.25 kB │ gzip:   0.21 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/chunk-QQBDHPVZ-BJU3Mk0_.js
+[90m│[39m  0.32 kB │ gzip:   0.19 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Form.stories-TqJ9slVO.js
+[90m│[39m  0.57 kB │ gzip:   0.37 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/react-CubzI6CK.js
+[90m│[39m  0.58 kB │ gzip:   0.34 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Badge-DMfZe3BM.js
+[90m│[39m  0.67 kB │ gzip:   0.42 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Badge.stories-Cm6NiKV0.js
+[90m│[39m  0.75 kB │ gzip:   0.40 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Eyebrow-alKO3Sdx.js
+[90m│[39m  0.87 kB │ gzip:   0.48 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/react-18-BywVU2Lz.js
+[90m│[39m  0.89 kB │ gzip:   0.51 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/rolldown-runtime-2s6bX4vc.js
+[90m│[39m  1.26 kB │ gzip:   0.69 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Eyebrow.stories-CMexOuug.js
+[90m│[39m  1.28 kB │ gzip:   0.63 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/AvatarGroup-BY8m_3KI.js
+[90m│[39m  1.31 kB │ gzip:   0.69 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Container-Bgu0j0W_.js
+[90m│[39m  1.37 kB │ gzip:   0.60 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/link-DokTIgdx.js
+[90m│[39m  1.41 kB │ gzip:   0.81 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/preload-helper-Lv_I9hyX.js
+[90m│[39m  1.74 kB │ gzip:   0.90 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/CommunityCollage.stories-BcOwzrJY.js
+[90m│[39m  1.95 kB │ gzip:   0.79 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Button-DDPtFxMu.js
+[90m│[39m  2.04 kB │ gzip:   0.90 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Avatar-group.stories-rG-e7SmP.js
+[90m│[39m  2.07 kB │ gzip:   0.82 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/ServiceCard-34EbGopj.js
+[90m│[39m  2.15 kB │ gzip:   1.00 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Heading-BkpDI0uX.js
+[90m│[39m  2.40 kB │ gzip:   0.86 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Categories.stories-Df0mZV87.js
+[90m│[39m  2.66 kB │ gzip:   1.18 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/ContactSection.stories-BNJpF5tw.js
+[90m│[39m  2.99 kB │ gzip:   1.24 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/ServiceCard.stories-CjH98c3B.js
+[90m│[39m  3.03 kB │ gzip:   1.08 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Footer.stories-DLjlyojg.js
+[90m│[39m  3.22 kB │ gzip:   1.37 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Paragraph-C34NjCGY.js
+[90m│[39m  3.29 kB │ gzip:   0.97 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/CommunityCollage-D9aSLh2L.js
+[90m│[39m  3.62 kB │ gzip:   1.31 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Form-DRFnHMdj.js
+[90m│[39m  3.67 kB │ gzip:   1.30 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/FeaturedCourse.stories-D_qxumPj.js
+[90m│[39m  3.89 kB │ gzip:   1.69 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/SocialProof.stories-DAhxp3JF.js
+[90m│[39m  4.13 kB │ gzip:   1.92 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Button.stories-5X3EpdT8.js
+[90m│[39m  4.42 kB │ gzip:   1.20 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/HowItWorks.stories-BDPpZMOu.js
+[90m│[39m  4.54 kB │ gzip:   1.88 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Container.stories-DEHSJl7_.js
+[90m│[39m  4.90 kB │ gzip:   1.58 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/chunk-3LY4VQVK-LhLHzVsM.js
+[90m│[39m  4.91 kB │ gzip:   2.08 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Hero.stories-Da3HCpq_.js
+[90m│[39m  5.15 kB │ gzip:   2.03 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/FinalCTA.stories-BcRTaV8s.js
+[90m│[39m  6.05 kB │ gzip:   2.04 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/CommunityShowcase.stories-M2kkK8A8.js
+[90m│[39m  6.19 kB │ gzip:   1.85 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/react-C7Icd8fu.js
+[90m│[39m  7.90 kB │ gzip:   3.03 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Header.stories-BV2K2nDR.js
+[90m│[39m  8.01 kB │ gzip:   3.26 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Heading.stories-eTzcYpAX.js
+[90m│[39m  8.39 kB │ gzip:   1.63 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/image-Bt1k8vqI.js
+[90m│[39m  16.97 kB │ gzip:   6.30 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/chunk-W22LQPXL-B1Xn9_bh.js
+[90m│[39m  22.63 kB │ gzip:   7.53 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/vite-inject-mocker-entry.js
+[90m│[39m  27.75 kB │ gzip:   9.66 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Paragraph.stories-Bzi5E5CT.js
+[90m│[39m  28.31 kB │ gzip:   2.83 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/Color-6AOWCN3U-Cij3zWLf.js
+[90m│[39m  30.41 kB │ gzip:  11.50 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/WithTooltip-CDUNV5IS-BnXXJI3h.js
+[90m│[39m  32.68 kB │ gzip:  11.45 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/theming-CjWcIsiM.js
+[90m│[39m  55.30 kB │ gzip:  21.31 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/syntaxhighlighter-4REYKNEV-DN5LU7PS.js
+[90m│[39m  75.80 kB │ gzip:  27.21 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/client-IrvytrDS.js
+[90m│[39m  207.19 kB │ gzip:  64.91 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/DocsRenderer-JROSPFPF-DYIE6CvB.js
+[90m│[39m  799.84 kB │ gzip: 250.84 kB
+[90m│[39m  ../../AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1/assets/iframe-Cw6S35Fj.js
+[90m│[39m  1,318.33 kB │ gzip: 371.04 kB
+
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[plugin builtin:vite-reporter]
+[90m│[39m  (!) Some chunks are larger than 500 kB after minification. Consider:
+[90m│[39m  - Using dynamic import() to code-split the application
+[90m│[39m  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+[90m│[39m  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+[90m│[39m  - Adjust chunk size limit for this warning via
+[90m│[39m  build.chunkSizeWarningLimit.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in "src/components/layout/form/Form.tsx" may
+[90m│[39m  not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/components/layout/form/Form.tsx:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m "use client";
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in "src/components/layout/header/Header.tsx"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m src/components/layout/header/Header.tsx:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m "use client";
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/shared/lib/hooks-client-context.shared-runtime.js"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m
+[90m│[39m  node_modules/next/dist/shared/lib/hooks-client-context.shared-runtime.js:1:1
+[90m│[39m  [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/shared/lib/app-router-context.shared-runtime.js"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m
+[90m│[39m  node_modules/next/dist/shared/lib/app-router-context.shared-runtime.js:1:1
+[90m│[39m  [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/client/components/redirect-boundary.js" may
+[90m│[39m  not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/client/components/redirect-boundary.js:1:1
+[90m│[39m  [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.js"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m
+[90m│[39m  node_modules/next/dist/shared/lib/server-inserted-html.shared-runtime.js:1:1
+[90m│[39m  [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use turbopack: no side effects" in
+[90m│[39m  "node_modules/next/dist/shared/lib/image-external.js" may not be
+[90m│[39m  preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/shared/lib/image-external.js:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use turbopack: no side effects';
+[90m│[39m  [38;5;240m│[0m ────────────────┬────────────────
+[90m│[39m  [38;5;240m│[0m                 ╰────────────────── module level directive may not
+[90m│[39m  be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/client/image-component.js" may not be
+[90m│[39m  preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/client/image-component.js:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in "node_modules/next/dist/client/script.js"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/client/script.js:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in
+[90m│[39m  "node_modules/next/dist/client/use-image-config.js" may not be
+[90m│[39m  preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/client/use-image-config.js:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level
+[90m│[39m  directive "use client" in "node_modules/next/dist/shared/lib/head.js"
+[90m│[39m  may not be preserved when bundling.
+[90m│[39m  [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m node_modules/next/dist/shared/lib/head.js:1:1 [38;5;246m][0m
+[90m│[39m  [38;5;246m│[0m
+[90m│[39m  [38;5;246m1 │[0m 'use client';
+[90m│[39m  [38;5;240m│[0m ──────┬──────
+[90m│[39m  [38;5;240m│[0m       ╰──────── module level directive may not be preserved
+[90m│[39m  [38;5;240m│[0m
+[90m│[39m  [38;5;240m│[0m [38;5;115mHelp[0m: For more information, see ]8;;https://rolldown.rs/in-depth/directives#other-directiveshttps://rolldown.rs/in-depth/d...]8;;
+[90m│[39m  [38;5;246m───╯[0m
+[90m│[39m  [39m
+[90m│[39m  [43mVite[49m [32m✓ built in 4.62s[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33m[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 3.2s of this 4.5s
+[90m│[39m  build (71%).
+[90m│[39m  The slowest callbacks, timed inside each callback (the wait before a
+[90m│[39m  callback starts is excluded, the time it awaits is included):
+[90m│[39m  - plugin storybook:react-docgen-plugin transform (23%, 1.0s, 367
+[90m│[39m  calls)
+[90m│[39m  Additional callback time came from the callbacks below and from
+[90m│[39m  callbacks under 1s.
+[90m│[39m  2 callbacks are listed without a time. Their calls overlapped, so the
+[90m│[39m  time inside one call includes work from other calls. To find their
+[90m│[39m  cost, profile the build with `node --cpu-prof`:
+[90m│[39m  - plugin plugin-csf transform (367 calls)
+[90m│[39m  - plugin vite-plugin-storybook-nextjs-swc transform (367 calls)
+[90m│[39m  See ]8;;https://rolldown.rs/reference/InputOptions.checks#bundlertimingshttps://rolldown.rs/reference/InputOptions.checks#bundlertimings]8;;
+[90m│[39m  for more details.
+[90m│[39m  [39m
+[90m│[39m
+[34m●[39m  Preview stats written to
+[90m│[39m  [36mC:\Users\Home\AppData\Local\Temp\chromatic--5820-LuS4C0fZWVV1\preview-stats.json[39m
+[90m│[39m
+[32m◇[39m  Output directory:
+[90m│[39m  C:/Users/Home/AppData/Local/Temp/chromatic--5820-LuS4C0fZWVV1
+[90m│[39m
+[90m└[39m  Storybook build completed successfully
+
