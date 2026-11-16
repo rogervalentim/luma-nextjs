@@ -37,7 +37,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   primary:
     "border border-transparent text-background-white bg-primary-blue hover:bg-primary-blue/90",
   outline:
-    "border border-line-1 text-text-primary bg-background-white hover:bg-background-white/90 transition-colors hover:border-slate-300 hover:bg-slate-50/80 hover:shadow-xs focus-visible:ring-slate-400 active:bg-slate-100",
+    "border border-line-1 text-text-primary bg-background-white hover:bg-background-white/90 transition-colors hover:border-slate-400 hover:bg-slate-50/80 hover:shadow-xs focus-visible:ring-slate-400 active:bg-slate-100",
   secondary:
     "border border-transparent text-text-primary bg-secondary-yellow hover:bg-secondary-yellow/90 transition-colors",
   ghost:
@@ -46,8 +46,8 @@ const variantClasses: Record<ButtonVariant, string> = {
 
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "px-5 py-2.5 text-sm",
-  md: "px-7 py-3.5 text-sm",
-  lg: "px-6 py-4 text-base", // Adicionei py-4 para manter proporção com sm e md
+  md: "px-7 py-3.5 text-sm lg:h-[54px]",
+  lg: "px-6 py-4 text-base",
 };
 
 export function Button({
@@ -59,7 +59,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold leading-6 cursor-pointer transition-colors duration-200 ease-out",
+    "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold  cursor-pointer transition-colors duration-200 ease-out",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
     "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
     disabled && "pointer-events-none cursor-not-allowed opacity-50",

@@ -20,6 +20,7 @@ export function Hero() {
     <Container
       as="section"
       spacing="lg"
+      id="hero"
       className="overflow-x-clip px-6 sm:px-10 xl:px-0"
       innerClassName="flex flex-col-reverse items-center justify-center  lg:flex-row lg:justify-between gap-12 lg:gap-15"
     >
