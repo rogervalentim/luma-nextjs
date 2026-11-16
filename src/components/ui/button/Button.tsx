@@ -3,6 +3,7 @@ import Link, { type LinkProps } from "next/link";
 import type {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
+  MouseEvent,
   ReactNode,
 } from "react";
 
@@ -59,8 +60,8 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold  cursor-pointer transition-colors duration-200 ease-out",
-    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+    "inline-flex w-fit items-center justify-center gap-2 rounded-lg font-bold cursor-pointer transition-colors duration-200 ease-out",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue",
     "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
     disabled && "pointer-events-none cursor-not-allowed opacity-50",
     variantClasses[variant],
@@ -71,18 +72,26 @@ export function Button({
   if (props.href !== undefined) {
     const { href, onClick, ...linkProps } = props;
 
+    const handleClick = onClick
+      ? (e: MouseEvent<HTMLAnchorElement>) => {
+          if (disabled) {
+            e.preventDefault();
+            return;
+          }
+          onClick(e);
+        }
+      : disabled
+        ? (e: MouseEvent<HTMLAnchorElement>) => {
+            e.preventDefault();
+          }
+        : undefined;
+
     return (
       <Link
         href={href}
         aria-disabled={disabled}
         tabIndex={disabled ? -1 : undefined}
-        onClick={(e) => {
-          if (disabled) {
-            e.preventDefault();
-            return;
-          }
-          onClick?.(e);
-        }}
+        onClick={handleClick}
         className={classes}
         {...linkProps}
       >

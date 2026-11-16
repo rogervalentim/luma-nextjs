@@ -35,10 +35,19 @@ const categories = [
 
 export function Categories() {
   return (
-    <section className="bg-background-white w-full" id="courses">
+    <section
+      className="bg-background-white w-full"
+      id="courses"
+      aria-labelledby="courses-heading"
+    >
       <Container as="div" spacing="lg">
         <Eyebrow className="mb-4">Find your next skill</Eyebrow>
-        <Heading className="max-w-full lg:max-w-140 mb-4" variant="h1" as="h2">
+        <Heading
+          id="courses-heading"
+          className="max-w-full lg:max-w-140 mb-4"
+          variant="h1"
+          as="h2"
+        >
           Learn something worth knowing.
         </Heading>
         <Paragraph

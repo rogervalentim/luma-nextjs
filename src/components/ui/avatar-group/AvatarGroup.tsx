@@ -30,6 +30,8 @@ export function AvatarGroup({
           alt={avatar.alt}
           width={size}
           height={size}
+          sizes={`${size}px`}
+          aria-hidden={avatar.alt ? undefined : true}
           style={{ width: size, height: size }}
           className={`rounded-full object-cover ${ringClassName}`}
         />

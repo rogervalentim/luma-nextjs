@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui";
 import { AvatarGroup } from "@/components/ui/avatar-group";
 import { Container } from "@/components/ui/container";

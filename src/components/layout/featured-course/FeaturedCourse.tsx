@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui";
 import { Container } from "@/components/ui/container/Container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -37,7 +35,7 @@ export function FeaturedCourse() {
             alt="Product design course — student working on interface designs"
             width={538}
             height={408}
-            priority
+            sizes="(max-width: 1024px) 100vw, 42vw"
             className="max-w-full h-auto rounded-2xl object-cover"
           />
         </div>

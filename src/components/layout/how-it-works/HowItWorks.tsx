@@ -80,9 +80,16 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <Container as="section" spacing="lg" innerClassName="w-full" id="about">
+    <Container
+      as="section"
+      spacing="lg"
+      innerClassName="w-full"
+      id="about"
+      aria-labelledby="how-it-works-heading"
+    >
       <Eyebrow className="text-center mb-4">How Luma works</Eyebrow>
       <Heading
+        id="how-it-works-heading"
         variant="h1"
         className="text-center mb-10 lg:mb-[102.79px]"
         as="h2"
@@ -115,7 +122,7 @@ export function HowItWorks() {
               {item.step}
             </Paragraph>
 
-            <Heading variant="h3" className="mb-3">
+            <Heading variant="h3" className="mb-3" as="h3">
               {item.title}
             </Heading>
 

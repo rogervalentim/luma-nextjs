@@ -12,6 +12,7 @@ const STATS = [
 export function SocialProof() {
   return (
     <section
+      id="teams"
       aria-label="Social proof and platform statistics"
       className="w-full bg-background-white"
     >
@@ -49,6 +50,7 @@ export function SocialProof() {
               alt="Alex Morgan"
               width={48}
               height={48}
+              sizes="(max-width: 640px) 44px, 48px"
               className="size-11 sm:size-12 shrink-0 rounded-full object-cover"
             />
             <div className="flex flex-col gap-0.5">

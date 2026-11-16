@@ -12,8 +12,14 @@ import { SocialProof } from "@/components/layout/social-proof/SocialProof";
 export default function Home() {
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background-white focus:px-4 focus:py-2 focus:text-text-primary focus:outline-2 focus:outline-offset-2 focus:outline-primary-blue"
+      >
+        Skip to main content
+      </a>
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Categories />
         <FeaturedCourse />

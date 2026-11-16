@@ -1,10 +1,13 @@
-"use client";
+import Image from "next/image";
 
 interface CollageImage {
   src: string;
   ratio: string;
+  width: number;
+  height: number;
   alt: string;
   className?: string;
+  sizes?: string;
 }
 
 interface CollageColumn {
@@ -21,14 +24,20 @@ const columns: CollageColumn[] = [
       {
         src: "/community-group/community-1.png",
         ratio: "102.722 / 154.083",
+        width: 103,
+        height: 154,
         alt: "International student smiling outdoors",
         className: "w-[74.42%] rounded-none",
+        sizes: "(max-width: 768px) 59vw, 19vw",
       },
       {
         src: "/community-group/community-2.png",
         ratio: "138.033 / 207.049",
+        width: 138,
+        height: 207,
         alt: "Teacher assisting a student during class",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
     ],
   },
@@ -39,20 +48,29 @@ const columns: CollageColumn[] = [
       {
         src: "/community-group/community-3.png",
         ratio: "102.722 / 170.134",
+        width: 103,
+        height: 170,
         alt: "Student studying with books",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
       {
         src: "/community-group/community-4.png",
         ratio: "102.722 / 172.541",
+        width: 103,
+        height: 173,
         alt: "Portrait of a smiling teacher",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
       {
         src: "/community-group/community-5.png",
         ratio: "102.722 / 128.403",
+        width: 103,
+        height: 128,
         alt: "Students collaborating on a project",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
     ],
   },
@@ -63,20 +81,29 @@ const columns: CollageColumn[] = [
       {
         src: "/community-group/community-6.png",
         ratio: "102.722 / 137.23",
+        width: 103,
+        height: 137,
         alt: "Student taking notes in a notebook",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
       {
         src: "/community-group/community-7.png",
         ratio: "102.722 / 138.033",
+        width: 103,
+        height: 138,
         alt: "Educator explaining a concept",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
       {
         src: "/community-group/community-8.png",
         ratio: "102.722 / 154.083",
+        width: 103,
+        height: 154,
         alt: "Student holding a laptop",
         className: "w-full",
+        sizes: "(max-width: 768px) 75vw, 24vw",
       },
     ],
   },
@@ -87,14 +114,20 @@ const columns: CollageColumn[] = [
       {
         src: "/community-group/community-9.png",
         ratio: "128.403 / 204.642",
+        width: 128,
+        height: 205,
         alt: "Group of international students talking",
         className: "w-full",
+        sizes: "(max-width: 768px) 80vw, 26vw",
       },
       {
         src: "/community-group/community-10.png",
         ratio: "102.722 / 132.415",
+        width: 103,
+        height: 132,
         alt: "Student smiling in the library",
         className: "w-[80%]",
+        sizes: "(max-width: 768px) 60vw, 22vw",
       },
     ],
   },
@@ -127,11 +160,16 @@ export function CommunityCollage() {
               key={image.src}
               style={{ aspectRatio: image.ratio }}
               className={`${baseImageWrapperClasses} ${image.className ?? ""}`}
+              data-slot={`${columnIndex + 1}-${imageIndex + 1}`}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
-                data-slot={`${columnIndex + 1}-${imageIndex + 1}`}
+                width={image.width}
+                height={image.height}
+                sizes={image.sizes ?? "(max-width: 768px) 75vw, 24vw"}
+                loading="lazy"
+                decoding="async"
                 className={imgShadowClasses}
               />
             </div>

@@ -97,7 +97,7 @@ export const AsSection: Story = {
             key={item}
             className="p-6 bg-white rounded-lg border border-slate-200 shadow-2xs text-slate-700"
           >
-            Bloco {item} dentro da Section (spacing="lg")
+            Bloco {item} dentro da Section (spacing={'lg'})
           </div>
         ))}
       </div>

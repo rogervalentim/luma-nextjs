@@ -1,6 +1,3 @@
-"use client";
-
-import Image from "next/image";
 import { Button } from "@/components/ui";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -23,7 +20,7 @@ export function CommunityShowcase({
   title = "Meet international students & teachers",
   description = "Morbi sit egestas dignissim pharetra, sed amet. Tempus justo senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam facilisi facilisi nec magna hendrerit. Placerat ipsum sit tellus urna, faucibus aenean lorem faucibus integer.",
   ctaLabel = "Explore teachers and students",
-  ctaHref = "/community",
+  ctaHref = "/#cta",
   imageSrc = "/community-showcase-image.png",
   imageAlt = "Group of international students and teachers smiling together",
 }: CommunityShowcaseProps) {
@@ -33,6 +30,8 @@ export function CommunityShowcase({
       spacing="lg"
       aria-labelledby="community-showcase-heading"
       id="community"
+      data-showcase-image-src={imageSrc}
+      data-showcase-image-alt={imageAlt}
       innerClassName="w-full flex flex-col items-start lg:flex-row lg:items-center justify-between gap-6 lg:gap-15"
     >
       <div className="w-full lg:132.5 flex-1">
@@ -51,8 +50,8 @@ export function CommunityShowcase({
           {description}
         </Paragraph>
 
-        <Button href="/#" variant="outline">
-          Explore teachers and students
+        <Button href={ctaHref} variant="outline">
+          {ctaLabel}
         </Button>
       </div>
 

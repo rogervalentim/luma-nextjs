@@ -18,14 +18,16 @@ const focusRingClass =
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const headerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLElement | null>(null);
 
   const toggleMenu = () => setIsMobileMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMobileMenuOpen(false);
 
-  // Fecha o menu mobile ao pressionar Escape ou clicar fora
   useEffect(() => {
-    if (!isMobileMenuOpen) return;
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -43,10 +45,12 @@ export function Header() {
       }
     };
 
+    document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
+      document.body.style.overflow = "";
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -59,6 +63,7 @@ export function Header() {
       innerClassName="flex justify-between items-center"
     >
       <nav
+        ref={headerRef}
         aria-label="Primary navigation"
         className="w-full max-w-280 flex justify-between items-center"
       >
@@ -112,22 +117,19 @@ export function Header() {
           </ul>
 
           <div className="flex gap-2 items-center">
-            <Link
-              href="/#cta"
-              className={`hidden lg:inline-block text-sm font-normal leading-6 text-text-secondary py-2 px-4 hover:opacity-80 transition-opacity ${focusRingClass}`}
-            >
-              Log in
-            </Link>
+            {/* Ações Desktop (ocultas no mobile/tablet) */}
+            <div className="hidden lg:flex gap-2 items-center">
+              <Link
+                href="/#cta"
+                className={`text-sm font-normal leading-6 text-text-secondary py-2 px-4 hover:opacity-80 transition-opacity ${focusRingClass}`}
+              >
+                Log in
+              </Link>
 
-            {/* Evita aninhar <button> dentro de <Link> */}
-            <Button
-              variant="primary"
-              size="sm"
-              href="/#course"
-              className="hidden lg:inline-flex"
-            >
-              Start learning
-            </Button>
+              <Button variant="primary" size="sm" href="/#course">
+                Start learning
+              </Button>
+            </div>
 
             {/* Botão Mobile/Tablet (abaixo de 1024px) */}
             <button

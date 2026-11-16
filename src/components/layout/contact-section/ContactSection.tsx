@@ -9,15 +9,19 @@ import { Form } from "../form/Form";
 
 export function ContactSection() {
   return (
-    <section className="w-full bg-background-white" id="teams">
+    <section
+      className="w-full bg-background-white"
+      id="contact"
+      aria-labelledby="contact-heading"
+    >
       <Container
-        as="section"
+        as="div"
         spacing="lg"
         innerClassName="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 lg:gap-12"
       >
         <div className="max-w-full lg:max-w-120">
           <Eyebrow className="mb-4">CONTACT</Eyebrow>
-          <Heading variant="h1" as="h2" className="mb-4">
+          <Heading id="contact-heading" variant="h1" as="h2" className="mb-4">
             Get in touch
           </Heading>
           <Paragraph tone="secondary" className="mb-10">
@@ -29,18 +33,20 @@ export function ContactSection() {
             <div className="max-w-full p-5 bg-background-light-yellow rounded-xl mb-4">
               <div className="flex items-center gap-4">
                 {/* icon */}
-                <Badge className="h-10 px-2.5 rounded-lg w-fit">
+                <Badge className="h-10 px-2.5 rounded-lg w-fit" aria-hidden="true">
                   <Image
                     src="/Icon-email.png"
-                    alt="icon email"
+                    alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
+                    sizes="24px"
                   />
                 </Badge>
                 <div>
                   <Paragraph size="sm">Email</Paragraph>
                   <Link
-                    href="/"
+                    href="mailto:contact@luma.com"
                     className="text-primary-blue text-sm leading-6"
                   >
                     contact@luma.com
@@ -51,12 +57,14 @@ export function ContactSection() {
             <div className="max-w-full p-5 bg-background-light-yellow rounded-xl">
               <div className="flex items-center gap-4">
                 {/* icon */}
-                <Badge className="h-10 px-2.5 rounded-lg w-fit">
+                <Badge className="h-10 px-2.5 rounded-lg w-fit" aria-hidden="true">
                   <Image
                     src="/icon-clock.png"
-                    alt="icon clock"
+                    alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
+                    sizes="24px"
                   />
                 </Badge>
                 <div>

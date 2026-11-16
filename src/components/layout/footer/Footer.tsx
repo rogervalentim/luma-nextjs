@@ -25,7 +25,7 @@ const FOOTER_SECTIONS = [
     title: "Support",
     links: [
       { label: "Help Center", href: "/#cta" },
-      { label: "Contact", href: "/#cta" },
+      { label: "Contact", href: "/#contact" },
       { label: "Terms", href: "/#cta" },
       { label: "Privacy", href: "/#cta" },
     ],
@@ -42,12 +42,13 @@ export function Footer() {
       >
         <div className="mb-16 grid grid-cols-2 gap-8 lg:flex">
           <div className="col-span-2 w-full lg:w-104">
-            <Link href="/" className="mb-3 inline-block">
+            <Link href="/" className="mb-3 inline-block" aria-label="Luma — Go to homepage">
               <Image
                 src="/luma-white.png"
                 alt="Luma"
                 width={54}
                 height={17}
+                sizes="54px"
                 className="h-[16.92px] w-[53.74px]"
               />
             </Link>

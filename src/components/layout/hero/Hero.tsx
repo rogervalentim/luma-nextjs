@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Button } from "../../ui";
 import { Eyebrow } from "../../ui/eyebrow";
@@ -81,6 +79,7 @@ export function Hero() {
           width={500}
           height={520}
           priority
+          sizes="(max-width: 1024px) 100vw, 42vw"
           className="w-full h-auto rounded-3xl relative z-10 object-cover"
         />
 
@@ -113,6 +112,8 @@ export function Hero() {
                 aria-hidden="true"
                 width={14}
                 height={14}
+                sizes="14px"
+                loading="lazy"
               />
             ))}
           </div>
