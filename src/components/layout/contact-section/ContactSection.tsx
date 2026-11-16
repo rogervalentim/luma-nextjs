@@ -31,7 +31,7 @@ export function ContactSection() {
                 {/* icon */}
                 <Badge className="h-10 px-2.5 rounded-lg w-fit">
                   <Image
-                    src="/icon-email.png"
+                    src="/Icon-email.png"
                     alt="icon email"
                     width={24}
                     height={24}
