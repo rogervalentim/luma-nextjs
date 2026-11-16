@@ -37,7 +37,7 @@ export function SocialProof() {
           </svg>
 
           <blockquote className="mb-6 sm:mb-8">
-            <Heading variant="h2" className="max-w-full lg:max-w-150">
+            <Heading variant="h2" className="max-w-full lg:max-w-150" as="h3">
               The lessons are short enough to fit into my week, but detailed
               enough that I actually leave with something I can use.
             </Heading>
@@ -65,7 +65,7 @@ export function SocialProof() {
         <div className="grid grid-cols-3 lg:flex lg:flex-col lg:gap-5  lg:border-l border-line-1 lg:pl-12 shrink-0">
           {STATS.map((stat) => (
             <div key={stat.label}>
-              <Heading color="primaryBlue" className="mb-1">
+              <Heading color="primaryBlue" className="mb-1" as="h3">
                 {stat.value}
               </Heading>
               <Paragraph size="sm" tone="tertiary">

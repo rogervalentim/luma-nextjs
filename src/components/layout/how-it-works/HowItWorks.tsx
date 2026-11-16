@@ -82,7 +82,11 @@ export function HowItWorks() {
   return (
     <Container as="section" spacing="lg" innerClassName="w-full" id="about">
       <Eyebrow className="text-center mb-4">How Luma works</Eyebrow>
-      <Heading variant="h1" className="text-center mb-10 lg:mb-[102.79px]">
+      <Heading
+        variant="h1"
+        className="text-center mb-10 lg:mb-[102.79px]"
+        as="h2"
+      >
         Less browsing. More learning.
       </Heading>
 

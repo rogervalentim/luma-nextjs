@@ -29,10 +29,19 @@ const colorStyles: Record<HeadingColor, string> = {
   white: "text-white",
 };
 
+const defaultElementByVariant: Record<HeadingVariant, HeadingElement> = {
+  display: "h1",
+  displaySm: "h2",
+  h1: "h2",
+  h2: "h3",
+  h3: "h4",
+  h4: "h5",
+};
+
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   (
     {
-      as = "h1",
+      as,
       variant = "display",
       color = "primary",
       className = "",
@@ -41,7 +50,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
     },
     ref,
   ) => {
-    const Component = as;
+    const Component = as ?? defaultElementByVariant[variant];
 
     const combinedClasses = [
       "font-jakarta",

@@ -21,7 +21,7 @@ export function Form() {
     <div className="w-full lg:max-w-120 px-5 py-6 lg:p-10 bg-background-white border border-line-1 rounded-2xl">
       {/* Cabeçalho do Card */}
       <div className="mb-6">
-        <Heading variant="h4" className="mb-2">
+        <Heading variant="h4" as="h4" className="mb-2">
           Contact us
         </Heading>
         <Paragraph size="sm" tone="secondary">

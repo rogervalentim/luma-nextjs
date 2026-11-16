@@ -51,6 +51,7 @@ export function FeaturedCourse() {
             id="featured-course-heading"
             variant="h1"
             color="white"
+            as="h2"
             className="max-w-full lg:max-w-134 mb-5"
           >
             Designing products people understand.

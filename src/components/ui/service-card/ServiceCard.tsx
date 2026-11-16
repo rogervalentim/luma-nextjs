@@ -30,6 +30,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       <Heading
         className="mb-3 transition-colors duration-300 ease-out group-hover/card:text-primary-blue"
         variant="h3"
+        as="h3"
       >
         {title}
       </Heading>

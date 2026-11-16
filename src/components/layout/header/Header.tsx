@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "../../ui";
 import { Container } from "@/components/ui/container/Container";
@@ -13,11 +12,45 @@ const NAV_LINKS = [
   { label: "About", href: "/#about" },
 ];
 
+const focusRingClass =
+  "rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue";
+
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
 
   const toggleMenu = () => setIsMobileMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMobileMenuOpen(false);
+
+  // Fecha o menu mobile ao pressionar Escape ou clicar fora
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeMenu();
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <Container
@@ -26,16 +59,23 @@ export function Header() {
       innerClassName="flex justify-between items-center"
     >
       <nav
-        aria-label="Main navigation"
+        aria-label="Primary navigation"
         className="w-full max-w-280 flex justify-between items-center"
       >
-        <Link href="/#hero" onClick={closeMenu} className="shrink-0">
+        <Link
+          href="/#hero"
+          onClick={closeMenu}
+          aria-label="Luma — Go to homepage"
+          className={`shrink-0 ${focusRingClass}`}
+        >
           <svg
             width="54"
             height="17"
             viewBox="0 0 54 17"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
           >
             <path d="M0 16.654V0H2.882V16.654H0Z" fill="#171B2C" />
             <path
@@ -63,7 +103,7 @@ export function Header() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="text-sm font-normal leading-6 text-text-secondary hover:opacity-80 transition-opacity"
+                  className={`text-sm font-normal leading-6 text-text-secondary hover:opacity-80 transition-opacity ${focusRingClass}`}
                 >
                   {item.label}
                 </Link>
@@ -74,25 +114,34 @@ export function Header() {
           <div className="flex gap-2 items-center">
             <Link
               href="/#cta"
-              className="hidden lg:inline-block text-sm font-normal leading-6 text-text-secondary py-2 px-4 hover:opacity-80 transition-opacity"
+              className={`hidden lg:inline-block text-sm font-normal leading-6 text-text-secondary py-2 px-4 hover:opacity-80 transition-opacity ${focusRingClass}`}
             >
               Log in
             </Link>
 
-            <Link href="/#course" className="hidden lg:inline-flex">
-              <Button variant="primary" size="sm">
-                Start learning
-              </Button>
-            </Link>
+            {/* Evita aninhar <button> dentro de <Link> */}
+            <Button
+              variant="primary"
+              size="sm"
+              href="/#course"
+              className="hidden lg:inline-flex"
+            >
+              Start learning
+            </Button>
 
             {/* Botão Mobile/Tablet (abaixo de 1024px) */}
             <button
+              ref={menuButtonRef}
               type="button"
               onClick={toggleMenu}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              className="lg:hidden p-2 -mr-2 hover:opacity-80 transition-opacity cursor-pointer"
+              aria-label={
+                isMobileMenuOpen
+                  ? "Close navigation menu"
+                  : "Open navigation menu"
+              }
+              className={`lg:hidden p-2 -mr-2 hover:opacity-80 transition-opacity cursor-pointer ${focusRingClass}`}
             >
               {isMobileMenuOpen ? (
                 <svg
@@ -106,6 +155,7 @@ export function Header() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <path d="M18 6 6 18" />
                   <path d="m6 6 12 12" />
@@ -118,6 +168,7 @@ export function Header() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M0.75 0.75H18.75M0.75 5.75H18.75M0.75 10.75H18.75"
@@ -135,6 +186,8 @@ export function Header() {
       {isMobileMenuOpen && (
         <div
           id="mobile-menu"
+          role="region"
+          aria-label="Mobile navigation"
           className="lg:hidden absolute top-full left-0 w-full bg-background-light-yellow border-b border-line-1 px-4 py-6 shadow-sm z-50"
         >
           <ul className="flex flex-col gap-4">
@@ -143,7 +196,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   onClick={closeMenu}
-                  className="block text-base font-normal leading-6 text-text-secondary hover:opacity-80 transition-opacity"
+                  className={`block py-1 text-base font-normal leading-6 text-text-secondary hover:opacity-80 transition-opacity ${focusRingClass}`}
                 >
                   {item.label}
                 </Link>
@@ -155,7 +208,7 @@ export function Header() {
             <Link
               href="/#cta"
               onClick={closeMenu}
-              className="text-center text-sm font-normal leading-6 text-text-secondary py-2 hover:opacity-80 transition-opacity"
+              className={`text-center text-sm font-normal leading-6 text-text-secondary py-2 hover:opacity-80 transition-opacity ${focusRingClass}`}
             >
               Log in
             </Link>

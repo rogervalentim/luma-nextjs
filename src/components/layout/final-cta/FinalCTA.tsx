@@ -67,6 +67,7 @@ export function FinalCTA({
           id="final-cta-heading"
           variant="displaySm"
           className="mb-4 text-center"
+          as="h2"
         >
           {title}
         </Heading>

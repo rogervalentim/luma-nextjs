@@ -38,7 +38,7 @@ export function Categories() {
     <section className="bg-background-white w-full" id="courses">
       <Container as="div" spacing="lg">
         <Eyebrow className="mb-4">Find your next skill</Eyebrow>
-        <Heading className="max-w-full lg:max-w-140 mb-4" variant="h1">
+        <Heading className="max-w-full lg:max-w-140 mb-4" variant="h1" as="h2">
           Learn something worth knowing.
         </Heading>
         <Paragraph

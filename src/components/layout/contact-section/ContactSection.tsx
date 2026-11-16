@@ -17,7 +17,7 @@ export function ContactSection() {
       >
         <div className="max-w-full lg:max-w-120">
           <Eyebrow className="mb-4">CONTACT</Eyebrow>
-          <Heading variant="h1" className="mb-4">
+          <Heading variant="h1" as="h2" className="mb-4">
             Get in touch
           </Heading>
           <Paragraph tone="secondary" className="mb-10">
