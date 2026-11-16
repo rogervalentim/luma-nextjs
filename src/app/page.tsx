@@ -3,6 +3,7 @@ import { CommunityShowcase } from "@/components/layout/community-showcase/Commun
 import { ContactSection } from "@/components/layout/contact-section/ContactSection";
 import { FeaturedCourse } from "@/components/layout/featured-course/FeaturedCourse";
 import { FinalCTA } from "@/components/layout/final-cta/FinalCTA";
+import { Footer } from "@/components/layout/footer/Footer";
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/layout/hero/Hero";
 import { HowItWorks } from "@/components/layout/how-it-works/HowItWorks";
@@ -22,6 +23,7 @@ export default function Home() {
         <ContactSection />
         <FinalCTA />
       </main>
+      <Footer />
     </>
   );
 }

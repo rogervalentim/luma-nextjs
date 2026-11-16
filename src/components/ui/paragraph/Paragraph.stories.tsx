@@ -16,7 +16,15 @@ const meta: Meta<typeof Paragraph> = {
     },
     tone: {
       control: "select",
-      options: ["primary", "secondary", "tertiary", "white", "primaryBlue"],
+      options: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "white",
+        "primaryBlue",
+        "whiteTertiary",
+        "textWhiteSecondary",
+      ],
       description: "Token de cor aplicado ao texto e borda",
     },
     variant: {
@@ -128,6 +136,38 @@ export const WhiteTone: Story = {
   },
 };
 
+export const TextWhiteSecondaryTone: Story = {
+  parameters: {
+    backgrounds: { default: "dark" },
+  },
+  render: (args) => (
+    <div className="rounded-lg bg-neutral-900 p-6">
+      <Paragraph {...args} />
+    </div>
+  ),
+  args: {
+    size: "md",
+    tone: "textWhiteSecondary",
+    maxWidth: "prose",
+  },
+};
+
+export const WhiteTertiaryTone: Story = {
+  parameters: {
+    backgrounds: { default: "dark" },
+  },
+  render: (args) => (
+    <div className="rounded-lg bg-neutral-900 p-6">
+      <Paragraph {...args} />
+    </div>
+  ),
+  args: {
+    size: "md",
+    tone: "whiteTertiary",
+    maxWidth: "prose",
+  },
+};
+
 export const OutlinedBadges: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
@@ -139,6 +179,30 @@ export const OutlinedBadges: Story = {
           2h 40min
         </Paragraph>
         <Paragraph size="sm" tone="white" variant="outlined">
+          Intermediate
+        </Paragraph>
+      </div>
+
+      <div className="flex flex-wrap gap-3 rounded-lg bg-neutral-900 p-6">
+        <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+          8 lessons
+        </Paragraph>
+        <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+          2h 40min
+        </Paragraph>
+        <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+          Intermediate
+        </Paragraph>
+      </div>
+
+      <div className="flex flex-wrap gap-3 rounded-lg bg-neutral-900 p-6">
+        <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
+          8 lessons
+        </Paragraph>
+        <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
+          2h 40min
+        </Paragraph>
+        <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
           Intermediate
         </Paragraph>
       </div>
@@ -362,6 +426,26 @@ export const AllVariants: Story = {
         </Paragraph>
       </div>
 
+      <div className="rounded-lg bg-neutral-900 p-4">
+        <span className="mb-1 block text-xs font-medium text-neutral-400">
+          Medium / Text White Secondary / Prose Max-Width
+        </span>
+        <Paragraph size="md" tone="textWhiteSecondary" maxWidth="prose">
+          Build real-world projects with guided feedback and structured modules
+          designed to take you from fundamentals to production-ready code.
+        </Paragraph>
+      </div>
+
+      <div className="rounded-lg bg-neutral-900 p-4">
+        <span className="mb-1 block text-xs font-medium text-neutral-400">
+          Medium / White Tertiary / Prose Max-Width
+        </span>
+        <Paragraph size="md" tone="whiteTertiary" maxWidth="prose">
+          Build real-world projects with guided feedback and structured modules
+          designed to take you from fundamentals to production-ready code.
+        </Paragraph>
+      </div>
+
       <div className="rounded-lg bg-blue-600 p-4">
         <span className="mb-2 block text-xs font-medium text-blue-100">
           Small / White / Outlined Variant
@@ -374,6 +458,40 @@ export const AllVariants: Story = {
             2h 40min
           </Paragraph>
           <Paragraph size="sm" tone="white" variant="outlined">
+            Intermediate
+          </Paragraph>
+        </div>
+      </div>
+
+      <div className="rounded-lg bg-neutral-900 p-4">
+        <span className="mb-2 block text-xs font-medium text-neutral-400">
+          Small / Text White Secondary / Outlined Variant
+        </span>
+        <div className="flex flex-wrap gap-3">
+          <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+            8 lessons
+          </Paragraph>
+          <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+            2h 40min
+          </Paragraph>
+          <Paragraph size="sm" tone="textWhiteSecondary" variant="outlined">
+            Intermediate
+          </Paragraph>
+        </div>
+      </div>
+
+      <div className="rounded-lg bg-neutral-900 p-4">
+        <span className="mb-2 block text-xs font-medium text-neutral-400">
+          Small / White Tertiary / Outlined Variant
+        </span>
+        <div className="flex flex-wrap gap-3">
+          <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
+            8 lessons
+          </Paragraph>
+          <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
+            2h 40min
+          </Paragraph>
+          <Paragraph size="sm" tone="whiteTertiary" variant="outlined">
             Intermediate
           </Paragraph>
         </div>

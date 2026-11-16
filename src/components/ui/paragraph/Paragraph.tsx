@@ -2,7 +2,13 @@ import React from "react";
 
 export type ParagraphSize = "xs" | "sm" | "default" | "md" | "lg";
 export type ParagraphTone =
-  "primary" | "secondary" | "white" | "tertiary" | "primaryBlue";
+  | "primary"
+  | "secondary"
+  | "white"
+  | "tertiary"
+  | "primaryBlue"
+  | "whiteTertiary"
+  | "textWhiteSecondary";
 export type ParagraphVariant = "default" | "outlined";
 
 export interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
@@ -28,6 +34,8 @@ const toneClasses: Record<ParagraphTone, string> = {
   tertiary: "text-text-tertiary",
   white: "text-white",
   primaryBlue: "text-primary-blue",
+  whiteTertiary: "text-text-white-tertiary",
+  textWhiteSecondary: "text-text-white-secondary",
 };
 
 const variantClasses: Record<
@@ -40,6 +48,8 @@ const variantClasses: Record<
     secondary: "",
     tertiary: "",
     primaryBlue: "",
+    whiteTertiary: "",
+    textWhiteSecondary: "",
   },
   outlined: {
     primary:
@@ -52,6 +62,10 @@ const variantClasses: Record<
       "inline-flex items-center justify-center rounded-lg border border-tertiary px-3.5 py-1.5",
     primaryBlue:
       "inline-flex items-center justify-center rounded-lg border border-primary-blue px-3.5 py-1.5",
+    whiteTertiary:
+      "inline-flex items-center justify-center rounded-lg border border-text-white-tertiary px-3.5 py-1.5",
+    textWhiteSecondary:
+      "inline-flex items-center justify-center rounded-lg border border-text-white-secondary px-3.5 py-1.5",
   },
 };
 
