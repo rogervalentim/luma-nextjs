@@ -64,7 +64,6 @@ export function Hero() {
           className="w-full h-auto rounded-3xl relative z-10"
         />
 
-        {/* Badge superior */}
         <div className="px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 bg-background-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.10)] absolute top-2 -left-2 sm:-left-5.5 z-20 rounded-xl">
           <Badge className="h-7 px-1 rounded-lg">120+</Badge>
           <p className="text-xs sm:text-sm font-normal leading-6 text-text-primary whitespace-nowrap">
@@ -72,10 +71,8 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Círculo de fundo azul */}
         <div className="absolute -left-4 sm:-left-8 lg:-left-11 bottom-2 sm:bottom-3 w-16 h-16 sm:w-20 sm:h-20 lg:w-26.5 lg:h-26.5 rounded-full bg-primary-blue-light z-0" />
 
-        {/* Badge inferior de rating */}
         <div className="px-3 sm:px-4 py-2.5 sm:py-3 flex items-center gap-2.5 sm:gap-3 bg-background-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.10)] absolute bottom-4 sm:bottom-[35.5px] -right-2 sm:-right-6 lg:-right-10 xl:-right-14 z-20 rounded-xl">
           <div className="flex gap-0.5 items-center shrink-0">
             <Image src="/star.png" alt="star" width={14} height={14} />
@@ -89,7 +86,6 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Bloco lateral laranja de fundo */}
         <div className="w-12 sm:w-22.25 h-[82%] lg:h-117 rounded-2xl bg-[#FFC599] absolute -right-2 sm:-right-6 lg:-right-9.75 top-1/2 -translate-y-1/2 z-0" />
       </div>
     </Container>
