@@ -4,7 +4,14 @@ import { ServiceCard } from "./ServiceCard";
 const meta: Meta<typeof ServiceCard> = {
   title: "Components/ServiceCard",
   component: ServiceCard,
-  tags: ["autodocs"], // Gera documentação automática das props
+  tags: ["autodocs"],
+  decorators: [
+    (Story) => (
+      <div className="p-4">
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
     step: { control: "text" },
     title: { control: "text" },
@@ -17,7 +24,6 @@ const meta: Meta<typeof ServiceCard> = {
 export default meta;
 type Story = StoryObj<typeof ServiceCard>;
 
-// Story 1: O Card isolado (padrão)
 export const Default: Story = {
   args: {
     step: "01",
@@ -28,7 +34,14 @@ export const Default: Story = {
   },
 };
 
-// Story 2: Simulando o layout original em Grid
+export const Hover: Story = {
+  args: {
+    ...Default.args,
+    className:
+      "!bg-background-light-yellow !ring-primary-blue !-translate-y-1 !shadow-[0_12px_24px_-8px_rgba(23,27,44,0.08)] [&>h3]:!text-primary-blue [&_svg]:!translate-x-1",
+  },
+};
+
 export const InGrid: Story = {
   render: () => {
     const items = [
