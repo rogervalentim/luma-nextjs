@@ -31,6 +31,7 @@ export function CommunityShowcase({
       as="section"
       spacing="lg"
       aria-labelledby="community-showcase-heading"
+      id="community"
       innerClassName="w-full flex flex-col items-start lg:flex-row lg:items-center justify-between gap-6 lg:gap-15"
     >
       <div className="w-full lg:132.5 flex-1">

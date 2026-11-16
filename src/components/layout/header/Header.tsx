@@ -7,10 +7,10 @@ import { Button } from "../../ui";
 import { Container } from "@/components/ui/container/Container";
 
 const NAV_LINKS = [
-  { label: "Courses", href: "/courses" },
-  { label: "For Teams", href: "/teams" },
-  { label: "Community", href: "/community" },
-  { label: "About", href: "/about" },
+  { label: "Courses", href: "/#courses" },
+  { label: "For Teams", href: "/#teams" },
+  { label: "Community", href: "/#community" },
+  { label: "About", href: "/#about" },
 ];
 
 export function Header() {
@@ -56,13 +56,13 @@ export function Header() {
 
         <div className="flex gap-2 items-center">
           <Link
-            href="/#"
+            href="/#cta"
             className="hidden md:inline-block text-sm font-normal leading-6 text-text-secondary py-2 px-2.5 hover:opacity-80 transition-opacity"
           >
             Log in
           </Link>
 
-          <Link href="/#" className="hidden md:inline-flex">
+          <Link href="/#course" className="hidden md:inline-flex">
             <Button variant="primary" size="sm">
               Start learning
             </Button>
@@ -134,13 +134,18 @@ export function Header() {
 
           <div className="mt-6 pt-4 border-t border-line-1 flex flex-col gap-3">
             <Link
-              href="/login"
+              href="/#cta"
               onClick={closeMenu}
               className="text-center text-sm font-normal leading-6 text-text-secondary py-2 hover:opacity-80 transition-opacity"
             >
               Log in
             </Link>
-            <Button variant="primary" className="w-full" onClick={closeMenu}>
+            <Button
+              variant="primary"
+              className="w-full"
+              onClick={closeMenu}
+              href="/#course"
+            >
               Start learning
             </Button>
           </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../../ui";
 import { Eyebrow } from "../../ui/eyebrow";
@@ -19,7 +21,7 @@ export function Hero() {
       as="section"
       spacing="lg"
       className="overflow-x-clip px-6 sm:px-10 xl:px-0"
-      innerClassName="flex flex-col-reverse  lg:flex-row lg:items-center lg:justify-between gap-12 lg:gap-15"
+      innerClassName="flex flex-col-reverse items-center justify-center  lg:flex-row lg:justify-between gap-12 lg:gap-15"
     >
       <div className="w-full lg:max-w-140">
         <Eyebrow variant="blue" className="mb-4">
@@ -35,10 +37,20 @@ export function Hero() {
           design, technology, business and more — one focused lesson at a time.
         </Paragraph>
         <div className="flex flex-col sm:flex-row gap-3 mb-8">
-          <Button variant="primary" size="md" className="w-full sm:w-fit">
+          <Button
+            variant="primary"
+            size="md"
+            href="#courses"
+            className="w-full sm:w-fit"
+          >
             Explore courses
           </Button>
-          <Button variant="outline" size="md" className="w-full sm:w-fit">
+          <Button
+            variant="outline"
+            size="md"
+            className="w-full sm:w-fit"
+            href="#about"
+          >
             See how it works
           </Button>
         </div>
@@ -54,7 +66,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative w-full max-w-85 sm:max-w-100 md:max-w-115 lg:max-w-125  lg:mx-0 shrink-0">
+      <div className="relative w-full max-w-85  sm:max-w-100 md:max-w-115 lg:max-w-125  lg:mx-0 shrink-0">
         <Image
           src="/whoman-hero.png"
           alt="Person focused on learning at their laptop"

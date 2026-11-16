@@ -7,27 +7,27 @@ const FOOTER_SECTIONS = [
   {
     title: "Explore",
     links: [
-      { label: "Courses", href: "/#" },
-      { label: "Categories", href: "/#" },
-      { label: "Instructors", href: "/#" },
-      { label: "For Teams", href: "/#" },
+      { label: "Courses", href: "/#courses" },
+      { label: "Categories", href: "/#course" },
+      { label: "Instructors", href: "/#community" },
+      { label: "For Teams", href: "/#teams" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/#" },
-      { label: "Careers", href: "/#" },
-      { label: "Journal", href: "/#" },
+      { label: "About", href: "/#about" },
+      { label: "Careers", href: "/#cta" },
+      { label: "Journal", href: "/#cta" },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Help Center", href: "/#" },
-      { label: "Contact", href: "/#" },
-      { label: "Terms", href: "/#" },
-      { label: "Privacy", href: "/#" },
+      { label: "Help Center", href: "/#cta" },
+      { label: "Contact", href: "/#cta" },
+      { label: "Terms", href: "/#cta" },
+      { label: "Privacy", href: "/#cta" },
     ],
   },
 ] as const;

@@ -9,33 +9,33 @@ const categories = [
     step: "01",
     title: "Product Design",
     description: "Turn complex problems into clear, useful experiences.",
-    href: "/categories/product-design",
+    href: "/#course",
   },
   {
     step: "02",
     title: "Technology",
     description:
       "Build a stronger understanding of the tools shaping digital products.",
-    href: "/categories/frontend",
+    href: "/#course",
   },
   {
     step: "03",
     title: "Business",
     description:
       "Develop practical skills for better decisions and stronger teams.",
-    href: "/categories/data",
+    href: "/#course",
   },
   {
     step: "04",
     title: "Creative",
     description: "Explore new ways to communicate, create and tell stories.",
-    href: "/categories/strategy",
+    href: "/#course",
   },
 ];
 
 export function Categories() {
   return (
-    <section className="bg-background-white w-full">
+    <section className="bg-background-white w-full" id="courses">
       <Container as="div" spacing="lg">
         <Eyebrow className="mb-4">Find your next skill</Eyebrow>
         <Heading className="max-w-full lg:max-w-140 mb-4" variant="h1">

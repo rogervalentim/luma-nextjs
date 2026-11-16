@@ -37,8 +37,8 @@ export function FinalCTA({
   title = "What will you learn next?",
   description = "Start with one course. Build from there.",
   avatars = DEFAULT_AVATARS,
-  primaryAction = { label: "Explore all courses", href: "/courses" },
-  secondaryAction = { label: "Join Luma", href: "/signup" },
+  primaryAction = { label: "Explore all courses", href: "/#courses" },
+  secondaryAction = { label: "Join Luma", href: "/#about" },
   backgroundImage = "/cta-bg.png",
   className = "",
 }: FinalCTAProps) {
@@ -51,6 +51,7 @@ export function FinalCTA({
           : undefined
       }
       className={`w-full bg-cover bg-center bg-no-repeat ${className}`.trim()}
+      id="cta"
     >
       <Container as="div" spacing="lg">
         {avatars.length > 0 && (

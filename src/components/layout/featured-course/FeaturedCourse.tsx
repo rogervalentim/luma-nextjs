@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui";
 import { Container } from "@/components/ui/container/Container";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -12,6 +14,7 @@ export function FeaturedCourse() {
     <section
       aria-labelledby="featured-course-heading"
       className="w-full bg-primary-blue"
+      id="course"
     >
       <Container
         as="div"
@@ -78,7 +81,12 @@ export function FeaturedCourse() {
 
           {/* Botões: empilhados no mobile, lado a lado a partir de 'sm' */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <Button variant="secondary" size="md" className="w-full sm:w-fit">
+            <Button
+              variant="secondary"
+              size="md"
+              className="w-full sm:w-fit"
+              href="#cta"
+            >
               View course
             </Button>
 
@@ -86,6 +94,7 @@ export function FeaturedCourse() {
               variant="ghost"
               size="md"
               className="w-full sm:w-fit inline-flex items-center justify-center gap-2"
+              href="/#courses"
             >
               Browse all courses
               <svg

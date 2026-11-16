@@ -9,7 +9,7 @@ import { Form } from "../form/Form";
 
 export function ContactSection() {
   return (
-    <section className="w-full bg-background-white">
+    <section className="w-full bg-background-white" id="teams">
       <Container
         as="section"
         spacing="lg"
