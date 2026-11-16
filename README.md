@@ -3,7 +3,6 @@
 Luma is a course-focused learning platform landing page built with Next.js App Router, React, TypeScript, Tailwind CSS, and Storybook. The application presents a polished marketing experience for featured courses, learning paths, social proof, and conversion-driven calls to action.
 
 - Live Demo: (https://luma-nextjs.vercel.app/)
-- Storybook: [TODO]
 
 ## Overview
 
