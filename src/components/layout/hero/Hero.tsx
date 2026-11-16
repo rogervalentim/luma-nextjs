@@ -75,7 +75,6 @@ export function Hero() {
           priority
           className="w-full h-auto rounded-3xl relative z-10 object-cover"
         />
-
         {/* Badge superior esquerdo */}
         <div className="px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 flex items-center gap-2 sm:gap-3 bg-background-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.10)] absolute top-3 md:top-4 -left-2 sm:-left-4 md:-left-6 z-20 rounded-xl">
           <Badge className="h-7 px-1.5 rounded-lg">120+</Badge>
@@ -83,10 +82,8 @@ export function Hero() {
             expert-led courses
           </p>
         </div>
-
         {/* Círculo azul inferior esquerdo */}
         <div className="absolute -left-3 sm:-left-5 md:-left-8 lg:-left-11 bottom-2 sm:bottom-3 md:bottom-4 w-14 h-14 sm:w-18 sm:h-18 md:w-22 md:h-22 lg:w-26.5 lg:h-26.5 rounded-full bg-primary-blue-light z-0" />
-
         {/* Badge inferior direito */}
         <div className="px-3 sm:px-4 py-2 sm:py-2.5 md:py-3 flex items-center gap-2 sm:gap-3 bg-background-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.10)] absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-[35.5px] -right-2 sm:-right-4 md:-right-7 lg:-right-10 xl:-right-14 z-20 rounded-xl">
           <div className="flex gap-0.5 items-center shrink-0">
@@ -100,9 +97,8 @@ export function Hero() {
             4.9 avg rating
           </p>
         </div>
-
         {/* Retângulo laranja lateral direito */}
-        <div className="w-10 sm:w-14 md:w-18 lg:w-22.25 h-[80%] md:h-[84%] lg:h-117 rounded-2xl bg-[#FFC599] absolute -right-2 sm:-right-4 md:-right-6 lg:-right-9.75 top-1/2 -translate-y-1/2 z-0" />
+        <div className="w-12 sm:w-16 md:w-18 lg:w-22.25 h-[90%] md:h-[84%] lg:h-117 rounded-2xl bg-[#FFC599] absolute -right-3 sm:-right-4 md:-right-6 lg:-right-9.75 top-1/2 -translate-y-1/2 z-0" />{" "}
       </div>
     </Container>
   );

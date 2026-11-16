@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Heading } from "@/components/ui/heading";
 import { Paragraph } from "@/components/ui/paragraph";
+import { CommunityCollage } from "@/components/ui/community-collage/CommunityCollage";
 
 interface CommunityShowcaseProps {
   eyebrow?: string;
@@ -55,16 +56,7 @@ export function CommunityShowcase({
         </Button>
       </div>
 
-      <div className="w-full lg:w-auto flex-1 flex justify-center lg:justify-end">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          width={530}
-          height={522}
-          sizes="(max-width: 1024px) 320px, 530px"
-          className="w-full max-w-full lg:max-w-132.5 h-auto object-contain"
-        />
-      </div>
+      <CommunityCollage />
     </Container>
   );
 }

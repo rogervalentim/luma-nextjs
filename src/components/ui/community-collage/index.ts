@@ -1,0 +1,1 @@
+export { CommunityCollage } from "./CommunityCollage";
