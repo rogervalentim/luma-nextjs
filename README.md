@@ -72,6 +72,19 @@ npm run build
 npm run build-storybook
 ```
 
+### Tests performed
+
+The application was validated with the following checks during implementation:
+
+- `npm run typecheck -- --pretty false` — verified that the TypeScript codebase and the added Storybook interaction stories compile without type errors.
+- `npm run build-storybook -- --quiet` — confirmed that the Storybook project builds successfully and that the interaction stories for the UI components render in the production Storybook bundle.
+
+Additionally, interaction coverage was added for the main interactive components using Storybook play functions:
+
+- `Button`: click and disabled-state behavior validation
+- `Form`: empty submission validation and successful submission flow
+- `Header`: mobile navigation open/close interaction and keyboard dismissal
+
 ## Key Architectural Decisions
 
 - App Router composition: the homepage is assembled in `src/app/page.tsx`, combining reusable layout sections such as `Header`, `Hero`, `FeaturedCourse`, and `FinalCTA` into a single landing page flow.
@@ -98,7 +111,7 @@ public/                     Static assets and imagery
 
 - No backend or CMS integration yet; course and content data are currently static in the front-end layer.
 - No authentication, user accounts, or checkout flow for enrollment.
-- No automated unit or end-to-end test coverage has been added yet.
+- Automated UI interaction testing is currently focused on Storybook-driven interactions for critical components; broader end-to-end testing is still planned.
 - No internationalization or localization support for multiple languages.
 - No dark mode or personalization settings have been implemented.
 - No real analytics or conversion tracking pipeline for production usage.

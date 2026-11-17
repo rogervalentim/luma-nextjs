@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { expect, fn, userEvent, within } from "storybook/test";
 import { Button, type ButtonProps } from "./Button";
 
 const meta = {
@@ -90,6 +91,37 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     children: "Disabled",
+  },
+};
+
+export const ClickInteraction: Story = {
+  args: {
+    children: "Submit",
+    onClick: fn(),
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /submit/i });
+
+    await userEvent.click(button);
+
+    await expect(args.onClick).toHaveBeenCalledTimes(1);
+  },
+};
+
+export const DisabledInteraction: Story = {
+  args: {
+    children: "Disabled",
+    disabled: true,
+    onClick: fn(),
+  },
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /disabled/i });
+
+    await expect(button).toBeDisabled();
+    await userEvent.click(button);
+    await expect(args.onClick).not.toHaveBeenCalled();
   },
 };
 
