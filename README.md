@@ -118,7 +118,7 @@ public/                     Static assets and imagery
 
 ## Development Time & AI Tools Used
 
-- Approximate Time Spent: [TODO: ~12 hours over 3 days]
+- Approximate Time Spent: ~12 hours over 3 days
 - AI Tools Used: GitHub Copilot was used to assist with scaffolding, component development, Storybook story creation, and documentation drafting. Final architectural decisions, visual review, and code validation were completed manually.
 
 ## Notes
